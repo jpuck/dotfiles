@@ -6,5 +6,7 @@
 	conflictstyle = diff3
 [alias]
 	logg = log --graph --oneline --decorate --all
+[color]
+        ui = true
 [include]
 	path = .gitconfig-custom
