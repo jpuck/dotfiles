@@ -1,0 +1,10 @@
+[core]
+	editor = nano -w
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[alias]
+	logg = log --graph --oneline --decorate --all
+[include]
+	path = .gitconfig-custom
