@@ -87,8 +87,6 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -la'
-alias c='clear'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -113,23 +111,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Enable tab completion
-source ~/.git-completion.bash
-
-# colors!
-lime="\[\033[01;32m\]"
-green="\[\033[0;32m\]"
-darkgreen="\[\033[2;49;32m\]"
-darkgray="\[\033[38;5;234m\]"
-blue="\[\033[0;34m\]"
-purple="\[\033[0;35m\]"
-reset="\[\033[0m\]"
-
-# Change command prompt
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-export PS1="$lime\u$darkgray@$darkgreen\h $blue\W$darkgreen\$(__git_ps1) $lime$ $reset"

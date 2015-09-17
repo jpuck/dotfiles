@@ -2,7 +2,7 @@
 common preferences
 
 this is a compilation of common preferences for bash prompt, aliases,  
-and git tools (tab completion & custom prompt). 
+and git version 1.7.10+ tools (tab completion & custom prompt). 
 
 .bashrc originally taken from stock Ubuntu 14.04 desktop  
 http://www.ubuntu.com/
@@ -12,8 +12,3 @@ from online course on https://www.udacity.com
 https://www.udacity.com/wiki/ud775/lesson-1-notes#morsel-30-setting-up-your-workspace-on-mac  
 https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash  
 https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-
-note for contributing:  
-.gitconfig personal info (name,email,etc.) can be  
-separately stored in a file named ".gitconfig-custom"  
-however, .gitconfig [include] directive requires git version 1.7.10+

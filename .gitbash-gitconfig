@@ -1,0 +1,11 @@
+[core]
+	editor = nano -w
+[push]
+	default = current
+[merge]
+	conflictstyle = diff3
+[alias]
+	lg = log --graph --oneline --decorate --all
+	l = log
+[color]
+        ui = true

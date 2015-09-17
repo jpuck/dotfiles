@@ -1,18 +1,34 @@
 #!/bin/bash
 
-# backup and copy new .bashrc
-cp ~/.bashrc ~/.bashrc-bak
-cp .bashrc ~/.bashrc
+# copy scripts to home directory
+cp .gitbash_include.bash ~/
+cp .gitbash-ubuntu14.04.bash ~/
+cp .gitbash-aliases.bash ~/
+cp .gitbash-colors.bash ~/
+cp .gitbash-git-completion.bash ~/
+cp .gitbash-gitconfig ~/
+cp .gitbash-git-prompt.sh ~/
 
-# backup and copy new .gitconfig
-cp ~/.gitconfig ~/.gitconfig-bak
-cp .gitconfig ~/.gitconfig
+# include resources in .bashrc
+if ! $(grep -q .gitbash_include.bash ~/.bashrc); then
+	echo "" >> ~/.bashrc
+	echo "# include gitbash resources" >> ~/.bashrc
+	echo "source ~/.gitbash_include.bash" >> ~/.bashrc
+else
+	echo "WARNING: .gitbash_include.bash already in .bashrc"
+	echo "   if you're having problems, check the line ordering for overrides"
+fi
 
-# copy git scripts
-cp .git-completion.bash ~/.git-completion.bash
-cp .git-prompt.sh ~/.git-prompt.sh
+# include resources in .gitconfig
+if [ ! -f ~/.gitconfig ]; then
+    touch ~/.gitconfig
+fi
+if ! $(grep -q .gitbash-gitconfig ~/.gitconfig); then
+	echo "[include]" >> ~/.gitconfig
+	echo "	path = ~/.gitbash-gitconfig" >> ~/.gitconfig
+fi
 
-# user will need to source .bashrc
+# source .bashrc to activate changes
 echo "installation complete."
 echo "in order to activate new changes type:"
 echo "   source ~/.bashrc"
