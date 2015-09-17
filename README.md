@@ -15,4 +15,5 @@ https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.s
 
 note for contributing:  
 .gitconfig personal info (name,email,etc.) can be  
-separately stored in a file named ".gitconfig-custom"
+separately stored in a file named ".gitconfig-custom"  
+however, .gitconfig [include] directive requires git version 1.7.10+
