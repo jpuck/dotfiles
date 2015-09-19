@@ -1,41 +1,51 @@
 #!/bin/bash
 
+# common bash preferences
 # copy scripts to home directory
-cp .gitbash_include.bash ~/
-cp .gitbash-ubuntu14.04.bash ~/
-cp .gitbash-aliases.bash ~/
-cp .gitbash-colors.bash ~/
-cp .gitbash-git-completion.bash ~/
-cp .gitbash-gitconfig ~/
-cp .gitbash-git-prompt.sh ~/
+cp .prefage-bash-include.bash ~/
+cp .prefage-bash-ubuntu14.04.bash ~/
+cp .prefage-bash-aliases.bash ~/
+cp .prefage-bash-colors.bash ~/
 
 # include resources in .bashrc
-if ! $(grep -q .gitbash_include.bash ~/.bashrc); then
+if [ ! -f ~/.bashrc ]; then
+    touch ~/.bashrc
+fi
+if ! $(grep -q .prefage-bash-include.bash ~/.bashrc); then
 	echo "" >> ~/.bashrc
-	echo "# include gitbash resources" >> ~/.bashrc
-	echo "source ~/.gitbash_include.bash" >> ~/.bashrc
+	echo "# include prefage resources" >> ~/.bashrc
+	echo "source ~/.prefage-bash-include.bash" >> ~/.bashrc
 else
-	echo "WARNING: .gitbash_include.bash already in .bashrc"
+	echo "WARNING: .prefage-bash-include.bash already in .bashrc"
 	echo "   if you're having problems, check the line ordering for overrides"
 fi
 
-# include resources in .gitconfig
-if [ ! -f ~/.gitconfig ]; then
-    touch ~/.gitconfig
-fi
-if ! $(grep -q .gitbash-gitconfig ~/.gitconfig); then
-	echo "[include]" >> ~/.gitconfig
-	echo "	path = ~/.gitbash-gitconfig" >> ~/.gitconfig
+
+# common git preferences
+# copy scripts to home directory
+if $(command -v git >/dev/null 2>&1); then
+	cp .prefage-git-completion.bash ~/
+	cp .prefage-git-config ~/
+	cp .prefage-git-prompt.sh ~/
+	# include resources in .gitconfig
+	if [ ! -f ~/.gitconfig ]; then
+	    touch ~/.gitconfig
+	fi
+	if ! $(grep -q .prefage-git-config ~/.gitconfig); then
+		echo "[include]" >> ~/.gitconfig
+		echo "	path = ~/.prefage-git-config" >> ~/.gitconfig
+	fi
+
+	# if meld installed, set git diff default external
+	if $(command -v meld >/dev/null 2>&1); then
+		cp .prefage-git-meld.bash ~/
+		echo "[diff]" >> ~/.prefage-git-config
+		echo "	external = ~/.prefage-git-meld.bash" >> ~/.prefage-git-config
+	else
+		echo "If this is a desktop, you might consider installing meld."
+	fi
 fi
 
-# if meld installed, set git diff default external
-if $(command -v meld >/dev/null 2>&1); then
-	cp .gitbash-meld.bash ~/
-	echo "[diff]" >> ~/.gitbash-gitconfig
-	echo "	external = ~/.gitbash-meld.bash" >> ~/.gitbash-gitconfig
-else
-	echo "If this is a desktop, you might consider installing meld."
-fi
 
 # source .bashrc to activate changes
 echo "installation complete."
