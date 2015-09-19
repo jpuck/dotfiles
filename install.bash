@@ -27,6 +27,7 @@ if $(command -v git >/dev/null 2>&1); then
 	cp .prefage-git-completion.bash ~/
 	cp .prefage-git-config ~/
 	cp .prefage-git-prompt.sh ~/
+	cp .prefage-git-ignore ~/
 	# include resources in .gitconfig
 	if [ ! -f ~/.gitconfig ]; then
 	    touch ~/.gitconfig

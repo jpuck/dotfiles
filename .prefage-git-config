@@ -1,5 +1,6 @@
 [core]
 	editor = nano -w
+	excludesfile = ~/.prefage-git-ignore
 [push]
 	default = current
 [merge]
