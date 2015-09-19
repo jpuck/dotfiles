@@ -28,6 +28,15 @@ if ! $(grep -q .gitbash-gitconfig ~/.gitconfig); then
 	echo "	path = ~/.gitbash-gitconfig" >> ~/.gitconfig
 fi
 
+# if meld installed, set git diff default external
+if $(command -v meld >/dev/null 2>&1); then
+	cp .gitbash-meld.bash ~/
+	echo "[diff]" >> ~/.gitbash-gitconfig
+	echo "	external = ~/.gitbash-meld.bash" >> ~/.gitbash-gitconfig
+else
+	echo "If this is a desktop, you might consider installing meld."
+fi
+
 # source .bashrc to activate changes
 echo "installation complete."
 echo "in order to activate new changes type:"
