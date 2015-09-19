@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# remove old prefage files
+./uninstall.bash
+
 # common bash preferences
 # copy scripts to home directory
 cp .prefage-bash-include.bash ~/

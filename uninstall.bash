@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # remove bash scripts
+echo "Removing old prefage bash files..."
 if [ -f ~/.prefage-bash-include.bash ]; then
 	rm ~/.prefage-bash-include.bash
 fi
@@ -25,6 +26,7 @@ fi
 #fi
 
 # remove git scripts
+echo "Removing old prefage git files..."
 if [ -f ~/.prefage-git-completion.bash ]; then
 	rm ~/.prefage-git-completion.bash
 fi
@@ -48,6 +50,7 @@ fi
 #fi
 
 # remove old gitbash named files
+echo "Removing old gitbash files..."
 if [ -f ~/.gitbash-aliases.bash ]; then
 	rm ~/.gitbash-aliases.bash
 fi
@@ -75,4 +78,4 @@ fi
 
 # restart terminal
 echo "Removal complete."
-echo "Restart Terminal."
+echo "Restart Terminal to purge cached effects."
