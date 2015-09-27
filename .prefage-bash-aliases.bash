@@ -1,3 +1,5 @@
 alias l='ls -la'
 alias c='clear'
 alias g='git'
+alias alog='sudo cat /var/log/apache2/access.log'
+alias elog='sudo cat /var/log/apache2/error.log'
