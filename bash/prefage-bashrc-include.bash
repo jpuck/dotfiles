@@ -2,6 +2,7 @@
 cd $( dirname "${BASH_SOURCE[0]}" )
 cd ..
 export prefage_directory=$(pwd)
+cd ~
 
 . $prefage_directory/bash/ubuntu14.04-bashrc.bash
 . $prefage_directory/bash/aliases.bash
