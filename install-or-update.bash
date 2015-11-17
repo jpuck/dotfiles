@@ -51,7 +51,7 @@ if $(command -v git >/dev/null 2>&1); then
 	fi
 
 	# if meld installed, set git diff default external if not already
-	if [[ $(command -v meld >/dev/null 2>&1) && ! $(grep -q "external = $prefage_directory/git/prefage-gitconfig-meld.bash" ~/.gitconfig) ]]; then
+	if $(command -v meld >/dev/null 2>&1) && ! $(grep -q "external = $prefage_directory/git/prefage-gitconfig-meld.bash" ~/.gitconfig); then
 		echo "setting meld as git diff external tool"
 		echo -e "[diff]
 		external = $prefage_directory/git/prefage-gitconfig-meld.bash" >> ~/.gitconfig
