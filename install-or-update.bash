@@ -15,7 +15,7 @@ fi
 
 # include bash resources
 # check if references already in bashrc
-if $(grep -q prefage-bashrc-include.bash ~/.bashrc); then
+if $(grep -q "source $prefage_directory/bash/prefage-bashrc-include.bash" ~/.bashrc); then
 	echo -e "
 	WARNING: prefage-bashrc-include.bash already in ~/.bashrc
 	If you're having problems, check the line ordering for overrides
