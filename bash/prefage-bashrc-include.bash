@@ -1,8 +1,5 @@
 # move to working directory
-cd $( dirname "${BASH_SOURCE[0]}" )
-cd ..
-export prefage_directory=$(pwd)
-cd ~
+export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 
 . $prefage_directory/bash/ubuntu14.04-bashrc.bash
 . $prefage_directory/bash/aliases.bash
