@@ -30,25 +30,33 @@ fi
 
 # include git resources
 if $(command -v git >/dev/null 2>&1); then
+
 	# create gitconfig if it doesn't exist
 	if [ ! -f ~/.gitconfig ]; then
 	    echo "creating ~/.gitconfig"
 	    touch ~/.gitconfig
 	fi
-	# check if references already included
-	if ! $(grep -q prefage-git-config-include ~/.gitconfig); then
+
+	# add main references if not already included
+	if ! $(grep -q "path = $prefage_directory/git/prefage-git-config-include" ~/.gitconfig); then
 		echo "adding prefage-git-config-include to ~/.gitconfig"
 		echo -e "[include]
 		path = $prefage_directory/git/prefage-git-config-include" >> ~/.gitconfig
 	fi
 
-	# if meld installed, set git diff default external
-	if $(command -v meld >/dev/null 2>&1); then
+	# add git ignore if not already included
+	if ! $(grep -q "path = $prefage_directory/git/ignore" ~/.gitconfig); then
+		echo -e "[core]
+		excludesfile = $prefage_directory/git/ignore" >> ~/.gitconfig
+	fi
+
+	# if meld installed, set git diff default external if not already
+	if [[ $(command -v meld >/dev/null 2>&1) && ! $(grep -q "external = $prefage_directory/git/prefage-git-config-meld.bash" ~/.gitconfig) ]]; then
 		echo "setting meld as git diff external tool"
 		echo -e "[diff]
-		external = $prefage_directory/git/meld.bash" >> $prefage_directory/git/prefage-git-config-include
+		external = $prefage_directory/git/prefage-git-config-meld.bash" >> ~/.gitconfig
 	else
-		echo "If this is a desktop, you might consider installing meld."
+		echo "If this is a desktop, then you might consider installing meld."
 	fi
 fi
 

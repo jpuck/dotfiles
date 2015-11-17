@@ -49,6 +49,28 @@ fi
 #	echo "	path = ~/.prefage-git-config" >> ~/.gitconfig
 #fi
 
+## add main references if not already included
+#if ! $(grep -q "path = $prefage_directory/git/prefage-git-config-include" ~/.gitconfig); then
+#	echo "adding prefage-git-config-include to ~/.gitconfig"
+#	echo -e "[include]
+#	path = $prefage_directory/git/prefage-git-config-include" >> ~/.gitconfig
+#fi
+
+## add git ignore if not already included
+#if ! $(grep -q "path = $prefage_directory/git/ignore" ~/.gitconfig); then
+#	echo -e "[core]
+#	excludesfile = $prefage_directory/git/ignore" >> ~/.gitconfig
+#fi
+
+## if meld installed, set git diff default external if not already
+#if [[ $(command -v meld >/dev/null 2>&1) && ! $(grep -q "external = $prefage_directory/git/prefage-git-config-meld.bash" ~/.gitconfig) ]]; then
+#	echo "setting meld as git diff external tool"
+#	echo -e "[diff]
+#	external = $prefage_directory/git/prefage-git-config-meld.bash" >> ~/.gitconfig
+#else
+#	echo "If this is a desktop, then you might consider installing meld."
+#fi
+
 # remove old gitbash named files
 echo "Removing old gitbash files..."
 if [ -f ~/.gitbash-aliases.bash ]; then
