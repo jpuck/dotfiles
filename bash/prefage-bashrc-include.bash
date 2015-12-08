@@ -16,6 +16,12 @@ if $(command -v git >/dev/null 2>&1); then
 	# '\W' adds the name of the current directory
 	# '\$(__git_ps1)' adds git-related stuff
 
-	export PS1="$(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$green\h $bluebright\W$green\$(__git_ps1) $lime$ $reset"
+	# host color can be overridden in host-color.bash
+	host_color=$green
+	if [ -f $prefage_directory/bash/host-color.bash ]; then
+		source $prefage_directory/bash/host-color.bash
+	fi
+
+	export PS1="$(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$host_color\h $bluebright\W$green\$(__git_ps1) $lime$ $reset"
 
 fi
