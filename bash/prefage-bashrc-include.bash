@@ -16,6 +16,6 @@ if $(command -v git >/dev/null 2>&1); then
 	# '\W' adds the name of the current directory
 	# '\$(__git_ps1)' adds git-related stuff
 
-	export PS1="$(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$green\h $bluebright\W\$( if true; then echo -e \"$green$(__git_ps1)\"; fi) $lime$ $reset"
+	export PS1="$(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$green\h $bluebright\W\$( if true; then echo -e \"$green\$(__git_ps1)\"; fi) $lime$ $reset"
 
 fi
