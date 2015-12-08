@@ -52,3 +52,43 @@ for i in {0..6}; do
 done
 
 echo -e "\n"
+
+echo 'special sequence to initiate prompt color change: \033[
+m: terminate
+separate values with ;
+0: normal
+1: bright
+30-37: foreground
+40-47: background'
+
+echo '
+example:
+echo -e "testing \033[0;30;41m COLOR1 \033[1;35;44m COLOR2 \033[m"'
+echo -e "testing \033[0;30;41m COLOR1 \033[1;35;44m COLOR2 \033[m"
+
+echo '
+for 256 colors,
+38;5;number foreground
+48;5;number background
+number = row number + column number
+
+example:
+echo -e "testing \033[38;5;226m SUPER YELLOW \033[m"'
+echo -e "testing \033[38;5;226m SUPER YELLOW \033[m"
+echo '
+echo -e "testing \033[38;5;226;48;5;17m SUPER YELLOW ON DEEP BLUE \033[m"'
+echo -e "testing \033[38;5;226;48;5;17m SUPER YELLOW ON DEEP BLUE \033[m"
+
+echo '
+for PS1 variable use,
+need to wrap in escaped square brackets: \[ color \]
+example:
+green="\[\033[0;32m\]"
+red="\[\033[0;31m\]"
+reset="\[\033[0m\]"
+
+so for green username with red hostname and everything else normal,
+line in ~/.bashrc would be:
+export PS1="$green\u $reset@ $red\h $reset$"
+'
+echo -e "\033[0;32musername\033[0m@\033[0;31mhostname\033[0m$"
