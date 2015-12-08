@@ -15,5 +15,15 @@ if $(command -v git >/dev/null 2>&1); then
 	# '\h' adds the name of the host
 	# '\W' adds the name of the current directory
 	# '\$(__git_ps1)' adds git-related stuff
-	export PS1="$lime\u$darkgraylight@$green\h $bluebright\W$green\$(__git_ps1) $lime$ $reset"
+
+	if [[ $EUID -eq 0 ]]; then
+		if [[ $(__git_ps1) ]]; then
+			export PS1="$red\u$darkgraylight@$green\h $bluebright\W$green\$(__git_ps1) $lime$ $reset"
+		else
+			export PS1="$red\u$darkgraylight@$green\h $bluebright\W $lime$ $reset"
+		fi
+	else
+		export PS1="$lime\u$darkgraylight@$green\h $bluebright\W$green\$(__git_ps1) $lime$ $reset"
+	fi
+
 fi
