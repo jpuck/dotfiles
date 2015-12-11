@@ -4,6 +4,7 @@ export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 . $prefage_directory/bash/ubuntu14.04-bashrc.bash
 . $prefage_directory/bash/aliases.bash
 . $prefage_directory/bash/colors.bash
+. $prefage_directory/bash/functions.bash
 
 if $(command -v git >/dev/null 2>&1); then
    . $prefage_directory/git/completion.bash
