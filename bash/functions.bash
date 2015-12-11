@@ -1,3 +1,5 @@
+# thanks vivek@nixCraft
+# http://www.cyberciti.biz/faq/linux-random-password-generator/
 genpasswd() {
 	local l=$1
        	[ "$l" == "" ] && l=16
