@@ -64,5 +64,7 @@ fi
 echo -e "
 prefage installation complete.
 in order to activate new changes type:
-   source ~/.bashrc
+
+source ~/.bashrc
+
 "
