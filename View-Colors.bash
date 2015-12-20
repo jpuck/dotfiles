@@ -91,4 +91,5 @@ so for green username with red hostname and everything else normal,
 line in ~/.bashrc would be:
 export PS1="$green\u $reset@ $red\h $reset$"
 '
-echo -e "\033[0;32musername\033[0m@\033[0;31mhostname\033[0m$"
+echo -e "\033[0;32m$(whoami)\033[0m@\033[0;31m$(hostname) \033[0m$
+"
