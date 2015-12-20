@@ -79,6 +79,9 @@ echo '
 echo -e "testing \033[38;5;226;48;5;17m SUPER YELLOW ON DEEP BLUE \033[m"'
 echo -e "testing \033[38;5;226;48;5;17m SUPER YELLOW ON DEEP BLUE \033[m"
 
+[[ $1 ]] && username_color=$1 || username_color="\033[0;32m"
+[[ $2 ]] && hostname_color=$2 || hostname_color="\033[0;31m"
+
 echo '
 for PS1 variable use,
 need to wrap in escaped square brackets: \[ color \]
@@ -89,7 +92,10 @@ reset="\[\033[0m\]"
 
 so for green username with red hostname and everything else normal,
 line in ~/.bashrc would be:
-export PS1="$green\u $reset@ $red\h $reset$"
+export PS1="$green\u$reset @ $red\h$reset $"
+
+this example is printed below, but you can also pass the username
+and hostname colors to this script as parameters 1 & 2
 '
-echo -e "\033[0;32m$(whoami)\033[0m@\033[0;31m$(hostname) \033[0m$
+echo -e "$username_color$(whoami)\033[0m @ $hostname_color$(hostname)\033[0m $
 "
