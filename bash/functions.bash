@@ -5,3 +5,10 @@ genpasswd() {
        	[ "$l" == "" ] && l=16
       	tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
+
+
+
+########### personal functions you can delete #################
+ouframe(){
+  git clone -o ouframe git@bitbucket.org:waltoncollegeofbusiness/omni.frame.git $1
+}
