@@ -11,8 +11,8 @@ git complete & prompt settings taken from [Udacity](https://www.udacity.com) cou
 git ignore mostly thanks to [Octocat](https://gist.github.com/octocat/9257657)
 
 ## getting started
-run install-or-update.bash  
+run `./install-or-update.bash`
 
-to remove, run uninstall.bash  
+to remove, run `./uninstall.bash`
 
-there is an additional apt-get-installer.bash for other helpful programs and should be run first, or simply run the install-or-update.bash script again afterwards to complete support.
+there is an additional apt-get-installer.bash for other helpful programs and should be run first, or simply run the `install-or-update.bash` script again afterwards to complete support.
