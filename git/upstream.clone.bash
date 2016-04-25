@@ -3,6 +3,10 @@
 # exit on error
 trap 'exit' ERR
 
+# inclue functions for github_create()
+echo "$( dirname "${BASH_SOURCE[0]}" )/functions.bash"
+source "$( dirname "${BASH_SOURCE[0]}" )/functions.bash"
+
 # name required
 if [ $# -eq 0 ]; then
   echo "name required"; exit 1
@@ -28,6 +32,7 @@ cd $1
 
 # document upstream remote
 echo "$(date "+%Y-%m-%d %a %T") $REPOSITORY" >> upstream.remote.git.txt
+git add upstream.remote.git.txt
 
 # check if master branch already exists
 #git rev-parse --verify master
@@ -36,7 +41,4 @@ echo "$(date "+%Y-%m-%d %a %T") $REPOSITORY" >> upstream.remote.git.txt
 #git checkout -b master
 
 # create new remote repository on github
-curl --data "{\"name\":\"$1\"}" -u admonkey https://api.github.com/user/repos
-
-# add new ssh remote origin
-git remote add origin git@github.com:admonkey/$1.git
+github_create
