@@ -1,6 +1,6 @@
 #!/bin/bash
 is_red_hat_maria_db=true
-my_cnf_file="/etc/mysql/my.cnf"
+my_cnf_file="/etc/my.cnf"
 
 # require root
 if ! [[ $EUID -eq 0 ]]; then
