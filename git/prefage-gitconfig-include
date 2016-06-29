@@ -7,5 +7,6 @@
 [alias]
 	lg = log --graph --oneline --decorate --all
 	l = log
+	b = branch -avv
 [color]
         ui = true
