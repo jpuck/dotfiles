@@ -1,7 +1,7 @@
 [core]
 	editor = nano -w
 [push]
-	default = current
+	default = upstream
 [merge]
 	conflictstyle = diff3
 [alias]
