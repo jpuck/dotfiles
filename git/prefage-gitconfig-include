@@ -5,8 +5,9 @@
 [merge]
 	conflictstyle = diff3
 [alias]
-	lg = log --graph --oneline --decorate --all
-	l = log --graph --oneline --decorate
-	b = branch -avv
+	b  = branch -avv
+	l  = log --graph --oneline --decorate
+	la = log --graph --oneline --decorate --all
+	lb = log --graph --oneline --decorate --branches
 [color]
         ui = true
