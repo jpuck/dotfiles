@@ -6,7 +6,7 @@
 	conflictstyle = diff3
 [alias]
 	lg = log --graph --oneline --decorate --all
-	l = log
+	l = log --graph --oneline --decorate
 	b = branch -avv
 [color]
         ui = true
