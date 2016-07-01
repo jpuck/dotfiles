@@ -10,5 +10,6 @@
 	l  = log --graph --oneline --decorate
 	la = log --graph --oneline --decorate --all
 	lb = log --graph --oneline --decorate --branches
+	dc = diff --cached
 [color]
         ui = true
