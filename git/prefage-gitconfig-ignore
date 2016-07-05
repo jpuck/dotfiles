@@ -2,6 +2,8 @@ node_modules/
 bower_components/
 vendor/
 scratch.php
+credentials.local.bash
+credentials.local.inc.php
 
 # thanks to Octocat
 # https://gist.github.com/octocat/9257657
