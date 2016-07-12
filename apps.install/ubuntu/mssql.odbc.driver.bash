@@ -10,7 +10,7 @@
 cd $( dirname "${BASH_SOURCE[0]}" )
 
 # root access needed
-sudo su
+if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 
 # dependencies
 apt-get install make unixodbc php5-odbc libc6 libkrb5-3 libgss3 e2fsprogs openssl libstdc++6 -y
