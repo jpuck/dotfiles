@@ -30,3 +30,8 @@ fi
 
 # include composer globals
 export PATH="~/.composer/vendor/bin:$PATH"
+
+# Load xdebug Zend extension with php command
+alias php='php -dzend_extension=xdebug.so'
+# PHPUnit needs xdebug for coverage. In this case, just make an alias with php command prefix.
+alias phpunit='php $(which phpunit)'
