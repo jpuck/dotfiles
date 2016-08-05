@@ -40,13 +40,5 @@ odbcinibak=$(odbc_config --odbcinstini) && cp $odbcinibak $odbcinibak.bak
 ./install.sh install
 # must type YES to install
 
-# problem with missing new library, link to old seems to work
-cd /usr/lib/x86_64-linux-gnu
-ln -s libodbcinst.so.1 libodbcinst.so.2
-
-# update libraries
-add-apt-repository ppa:ubuntu-toolchain-r/test
-# hit ENTER to accept new ppa
-apt-get update
-apt-get upgrade -y
-apt-get dist-upgrade -y
+# restart apache
+service apache2 restart
