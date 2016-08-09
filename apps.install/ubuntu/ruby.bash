@@ -9,3 +9,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 rvm get head # Make Sure RVM up to date
 
 rvm install ruby
+
+# TODO:
+# Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin"
