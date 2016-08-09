@@ -5,3 +5,4 @@ alias gup="~/prefage/git/upstream.clone.bash"
 alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 restart'
 alias tree="tree -I 'vendor|node_modules'"
+alias o='xdg-open'
