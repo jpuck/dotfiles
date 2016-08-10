@@ -5,6 +5,12 @@ scratch.php
 credentials.local.bash
 credentials.local.inc.php
 
+# kate cache temp files
+*.kate-swp
+
+# open-office cache temp files
+.~lock.*
+
 # thanks to Octocat
 # https://gist.github.com/octocat/9257657
 # Compiled source #
