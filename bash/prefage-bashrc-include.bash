@@ -7,6 +7,8 @@ export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 . $prefage_directory/bash/functions.bash
 . $prefage_directory/git/functions.bash
 
+export PATH="$prefage_directory/bin:$PATH"
+
 if $(command -v git >/dev/null 2>&1); then
    . $prefage_directory/git/completion.bash
 	. $prefage_directory/git/prompt.sh

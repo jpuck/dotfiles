@@ -6,3 +6,4 @@ alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 restart'
 alias tree="tree -I 'vendor|node_modules'"
 alias o='xdg-open'
+alias brw='byzanz-record-window'
