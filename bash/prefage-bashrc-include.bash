@@ -26,7 +26,7 @@ if $(command -v git >/dev/null 2>&1); then
 		source $prefage_directory/bash/host-color.bash
 	fi
 
-	export PS1="$(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime$ $reset"
+	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime$ $reset"
 
 fi
 
@@ -37,3 +37,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 alias php='php -dzend_extension=xdebug.so'
 # PHPUnit needs xdebug for coverage. In this case, just make an alias with php command prefix.
 alias phpunit='php $(which phpunit)'
+
+# get timestamp at command execute
+# http://unix.stackexchange.com/a/304270/148062
+trap 'echo -e "\033[38;5;239m$(date +%H:%M:%S)\033[0m"' DEBUG
