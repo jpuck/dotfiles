@@ -13,3 +13,5 @@
 	dc = diff --cached
 [color]
         ui = true
+[advice]
+	statusHints = off
