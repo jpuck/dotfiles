@@ -11,6 +11,7 @@
 	la = log --graph --oneline --decorate --all
 	lb = log --graph --oneline --decorate --branches
 	dc = diff --cached
+	skipped = !git ls-files -v | grep "^S"
 [color]
         ui = true
 [advice]
