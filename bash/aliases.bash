@@ -7,3 +7,6 @@ alias asr='sudo service apache2 restart'
 alias tre="tree -I 'vendor|node_modules'"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
+alias st='git status'
+alias pl='git pull'
+alias ph='git push'
