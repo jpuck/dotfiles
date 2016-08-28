@@ -31,7 +31,7 @@ if $(command -v git >/dev/null 2>&1); then
 fi
 
 # include composer globals
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$PATH"
 
 # Load xdebug Zend extension with php command
 alias php='php -dzend_extension=xdebug.so'
