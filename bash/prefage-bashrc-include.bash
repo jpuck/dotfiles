@@ -41,3 +41,6 @@ alias phpunit='php $(which phpunit)'
 # get timestamp at command execute
 # http://unix.stackexchange.com/a/304270/148062
 trap 'echo -e "\033[38;5;239m$(date +%H:%M:%S)\033[0m"' DEBUG
+
+# set tab width
+tabs -4
