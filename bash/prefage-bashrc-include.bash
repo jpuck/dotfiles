@@ -5,14 +5,15 @@ export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 . $prefage_directory/bash/aliases.bash
 . $prefage_directory/bash/colors.bash
 . $prefage_directory/bash/functions.bash
-. $prefage_directory/git/functions.bash
 . $prefage_directory/php/composer.php.ini.bash
 
 export PATH="$prefage_directory/bin:$PATH"
 
 if $(command -v git >/dev/null 2>&1); then
-   . $prefage_directory/git/completion.bash
+	. $prefage_directory/git/completion.bash
 	. $prefage_directory/git/prompt.sh
+	. $prefage_directory/git/functions.bash
+	. $prefage_directory/git/aliases.bash
 
 	# Change command prompt
 	export GIT_PS1_SHOWDIRTYSTATE=1
