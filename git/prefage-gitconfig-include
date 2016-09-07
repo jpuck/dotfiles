@@ -8,9 +8,9 @@
 [alias]
 	b  = branch -avv
 	r  = remote -v
-	l  = log --graph --oneline --decorate
-	la = log --graph --oneline --decorate --all
-	lb = log --graph --oneline --decorate --branches
+	l  = log --graph --format='%C(auto)%h %s%d %Cgreen%cr'
+	la = !git l --all
+	lb = !git l --branches
 	dc = diff --cached
 	skipped = !git ls-files -v | grep "^S"
 [color]
