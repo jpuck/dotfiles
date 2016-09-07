@@ -38,9 +38,10 @@ alias php='php -dzend_extension=xdebug.so'
 # PHPUnit needs xdebug for coverage. In this case, just make an alias with php command prefix.
 alias phpunit='php $(which phpunit)'
 
+# set tab width
+tabs -4
+
+# DO THIS LAST to keep clean console on launch
 # get timestamp at command execute
 # http://unix.stackexchange.com/a/304270/148062
 trap 'echo -e "\033[38;5;239m$(date +%H:%M:%S)\033[0m"' DEBUG
-
-# set tab width
-tabs -4
