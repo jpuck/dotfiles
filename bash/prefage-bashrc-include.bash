@@ -6,6 +6,7 @@ export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 . $prefage_directory/bash/colors.bash
 . $prefage_directory/bash/functions.bash
 . $prefage_directory/git/functions.bash
+. $prefage_directory/php/composer.php.ini.bash
 
 export PATH="$prefage_directory/bin:$PATH"
 
@@ -29,14 +30,6 @@ if $(command -v git >/dev/null 2>&1); then
 	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $lime; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime$ $reset"
 
 fi
-
-# include composer globals
-export PATH="$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$PATH"
-
-# Load xdebug Zend extension with php command
-alias php='php -dzend_extension=xdebug.so'
-# PHPUnit needs xdebug for coverage. In this case, just make an alias with php command prefix.
-alias phpunit='php $(which phpunit)'
 
 # set tab width
 tabs -4
