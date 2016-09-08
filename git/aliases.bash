@@ -2,6 +2,7 @@ alias s='git status'
 alias a='git add'
 alias au='git add --update'
 alias cam='git commit -am'
+alias cmm='git commit -m'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
