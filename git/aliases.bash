@@ -27,6 +27,7 @@ __git_complete st _git_stash
 
 # aliased aliases
 alias la='git la'
+alias b='git b'
 
 # scripts
 alias gup="$prefage_directory/git/upstream.clone.bash"
