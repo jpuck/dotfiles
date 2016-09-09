@@ -8,7 +8,7 @@
 [alias]
 	b  = branch -avv
 	r  = remote -v
-	l  = log --graph --format='%C(auto)%h %s%d %Cgreen%cr'
+	l  = log --graph --format='%C(auto)%h %s%d %Cgreen%ar'
 	la = !git l --all
 	lb = !git l --branches
 	dc = diff --cached
