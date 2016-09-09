@@ -26,6 +26,8 @@ alias cm='git commit'
 __git_complete cm _git_commit
 alias st='git stash'
 __git_complete st _git_stash
+alias show='git show'
+__git_complete show _git_show
 
 # aliased aliases
 alias la='git la'
