@@ -5,6 +5,7 @@ alias cam='git commit -am'
 alias cmm='git commit -m'
 alias skp='git update-index --skip-worktree'
 alias noskp='git update-index --no-skip-worktree'
+alias ammend='git commit -a --amend -C HEAD'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
