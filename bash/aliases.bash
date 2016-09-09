@@ -3,7 +3,7 @@ alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 
 # http://stackoverflow.com/a/15157360/4233593#how-to-use-package-installed-locally-in-node-modules
 alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 restart'
-alias tre="tree -I 'vendor|node_modules'"
+alias tre="tree -I 'vendor|node_modules|nbproject|coverage'"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 alias art='php artisan'
