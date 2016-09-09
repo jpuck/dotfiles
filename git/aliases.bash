@@ -4,7 +4,7 @@ alias au='git add --update'
 alias cam='git commit -am'
 alias cmm='git commit -m'
 alias skp='git update-index --skip-worktree'
-alias noskip='git update-index --no-skip-worktree'
+alias noskp='git update-index --no-skip-worktree'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
@@ -30,7 +30,7 @@ __git_complete st _git_stash
 # aliased aliases
 alias la='git la'
 alias b='git b'
-alias skpped='git skipped'
+alias skpd='git skipped'
 
 # scripts
 alias gup="$prefage_directory/git/upstream.clone.bash"
