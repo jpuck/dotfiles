@@ -1,4 +1,3 @@
-alias s='git status'
 alias a='git add'
 alias au='git add --update'
 alias cam='git commit -am'
@@ -31,6 +30,7 @@ alias show='git show'
 __git_complete show _git_show
 
 # aliased aliases
+alias s='git s'
 alias la='git la'
 alias b='git b'
 alias skpd='git skipped'

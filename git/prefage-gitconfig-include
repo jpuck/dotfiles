@@ -13,6 +13,7 @@
 	lb = !git l --branches
 	dc = diff --cached
 	skipped = !git ls-files -v | grep "^S"
+	s  = !git status && echo && git skipped
 [color]
 	ui = true
 [advice]
