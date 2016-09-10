@@ -37,3 +37,23 @@ alias skpd='git skipped'
 
 # scripts
 alias gup="$prefage_directory/git/upstream.clone.bash"
+
+# delete merged branches local & remote
+# http://stackoverflow.com/a/6127884/4233593
+# http://stackoverflow.com/a/8229823/4233593
+git_clean_merged_remote(){
+	if [ -z $1 ]; then echo "error: remote required"; return; fi
+	if [ -z $2 ]; then echo "error: branch required"; return; fi
+	git branch -a --merged remotes/$1/$2 | grep -v $2 | grep "remotes/$1/" | cut -d "/" -f 3 | xargs -n 1 git push --delete $1
+}
+
+alias gcr='git_clean_merged_remote'
+__git_complete gcr _git_pull
+
+git_clean_merged_local(){
+	if [ -z $1 ]; then echo "error: branch required"; return; fi
+	git branch --merged | egrep -v "(^\*|master|dev|develop|$1)" | xargs git branch -d
+}
+
+alias gcl='git_clean_merged_local'
+__git_complete gcl _git_checkout
