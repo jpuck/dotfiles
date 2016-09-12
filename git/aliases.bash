@@ -28,6 +28,8 @@ alias st='git stash'
 __git_complete st _git_stash
 alias show='git show'
 __git_complete show _git_show
+alias showl='git show --stat'
+__git_complete showl _git_show
 
 # aliased aliases
 alias s='git s'
