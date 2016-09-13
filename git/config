@@ -16,6 +16,7 @@
 	s  = !git status && echo && git skipped
 	# http://stackoverflow.com/a/39466418/4233593
 	alias = !git config --list | grep ^alias\\. | cut -c 7- | grep -Ei --color \"$1\" "#"
+	showm = "!f(){ if [ -z $1 ]; then c='HEAD'; else c=$1; fi; git difftool --tool=meld -y $c~..$c; }; f"
 [color]
 	ui = true
 [advice]

@@ -34,6 +34,8 @@ alias show='git show'
 __git_complete show _git_show
 alias showl='git show --stat'
 __git_complete showl _git_show
+alias showm='git showm'
+__git_complete showm _git_show
 
 # aliased aliases
 alias s='git s'
