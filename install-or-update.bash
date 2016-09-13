@@ -38,16 +38,16 @@ if $(command -v git >/dev/null 2>&1); then
 	fi
 
 	# add main references if not already included
-	if ! $(grep -q "path = $prefage_directory/git/prefage-gitconfig-include" ~/.gitconfig); then
-		echo "adding prefage-git-config-include to ~/.gitconfig"
+	if ! $(grep -q "path = $prefage_directory/git/config" ~/.gitconfig); then
+		echo "adding include to ~/.gitconfig"
 		echo -e "[include]
-		path = $prefage_directory/git/prefage-gitconfig-include" >> ~/.gitconfig
+		path = $prefage_directory/git/config" >> ~/.gitconfig
 	fi
 
 	# add git ignore if not already included
-	if ! $(grep -q "path = $prefage_directory/git/prefage-gitconfig-ignore" ~/.gitconfig); then
+	if ! $(grep -q "path = $prefage_directory/git/ignore" ~/.gitconfig); then
 		echo -e "[core]
-		excludesfile = $prefage_directory/git/prefage-gitconfig-ignore" >> ~/.gitconfig
+		excludesfile = $prefage_directory/git/ignore" >> ~/.gitconfig
 	fi
 
 fi
