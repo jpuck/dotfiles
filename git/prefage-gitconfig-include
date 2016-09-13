@@ -14,6 +14,8 @@
 	dc = diff --cached
 	skipped = !git ls-files -v | grep "^S"
 	s  = !git status && echo && git skipped
+	# http://stackoverflow.com/a/39466418/4233593
+	alias = !git config --list | grep ^alias\\. | cut -c 7- | grep -Ei --color \"$1\" "#"
 [color]
 	ui = true
 [advice]
