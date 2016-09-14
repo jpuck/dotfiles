@@ -13,5 +13,6 @@ if [ -n "$which_composer" ]; then
 	current_php_ini="$(php --ini | grep 'Loaded Configuration File:' | awk '{print $4}')";
 	cat "$current_php_ini" | grep -v xdebug > "$composer_php_ini";
 	alias c="php -c '$composer_php_ini' '$which_composer'";
+	alias cda="c dumpautoload"
 	export PATH="$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$PATH";
 fi
