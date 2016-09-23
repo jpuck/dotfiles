@@ -8,3 +8,8 @@ genpasswd() {
 	[ "$l" == "" ] && l=16
 	tr -dc \\050-\\172 < /dev/urandom | head -c ${l} | xargs
 }
+
+# NOTE: does not count newlines
+strlen() {
+	echo -n "$1" | wc -m
+}
