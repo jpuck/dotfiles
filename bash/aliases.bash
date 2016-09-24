@@ -17,3 +17,4 @@ alias rd='rm -rf'
 alias myr='mysql -u root -p'
 # http://stackoverflow.com/a/20521936/4233593
 alias deltrailspaces="sed -i 's/\s*$//'"
+alias vc='php -S localhost:8080 -t coverage/'
