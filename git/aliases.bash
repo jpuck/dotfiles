@@ -33,9 +33,9 @@ alias cm='git commit'
 __git_complete cm _git_commit
 alias st='git stash'
 __git_complete st _git_stash
-alias show='git show'
+alias show='showl --patch'
 __git_complete show _git_show
-alias showl='git show --stat'
+alias showl='git show --stat --summary'
 __git_complete showl _git_show
 alias showm='git showm'
 __git_complete showm _git_show
