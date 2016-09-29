@@ -1,4 +1,4 @@
-alias l='ls -la --time-style="+%Y-%m-%d %a %T"'
+alias l='ls -lah --time-style="+%Y-%m-%d %a %T"'
 alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 2>\&1/' | sh | grep -v 'no crontab for'"
 # http://stackoverflow.com/a/15157360/4233593#how-to-use-package-installed-locally-in-node-modules
 alias nexec='PATH=$(npm bin):$PATH'
