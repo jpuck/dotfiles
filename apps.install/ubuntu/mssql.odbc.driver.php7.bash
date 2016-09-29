@@ -23,7 +23,7 @@ service apache2 restart
 wget https://download.microsoft.com/download/2/E/5/2E58F097-805C-4AB8-9FC6-71288AB4409D/msodbcsql-13.0.0.0.tar.gz
 tar xvzf msodbcsql-13.0.0.0.tar.gz
 cd msodbcsql-13.0.0.0
-./build_dm.sh
+./build_dm.sh --accept-warning
 
 # driver manager will have custom directory
 cd /tmp/unixODBC.*/unixODBC-*; make install
@@ -37,7 +37,7 @@ odbcinibak=$(odbc_config --odbcinstini) && cp $odbcinibak $odbcinibak.bak
 
 # actually install driver
 ./install.sh verify
-./install.sh install
+./install.sh install --accept-license
 # must type YES to install
 
 # restart apache
