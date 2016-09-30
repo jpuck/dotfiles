@@ -23,6 +23,7 @@ alias t='phpunit'
 alias tt='phpunit --testdox'
 alias k='kate'
 alias less='less --tabs=4'
+alias myr='mysql -u root -p'
 
 # make a file and any folders along the way
 alias mk='install -m=664 -b -D /dev/null'
@@ -32,7 +33,6 @@ alias mkx='install -b -D /dev/null'
 alias mkd='mkdir -p'
 # remove directory
 alias rd='rm -rf'
-alias myr='mysql -u root -p'
 
 # delete trailing spaces from a file
 # http://stackoverflow.com/a/20521936/4233593
