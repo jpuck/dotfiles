@@ -1,4 +1,12 @@
+# list
 alias l='ls -lah --time-style="+%Y-%m-%d %a %T"'
+# list sort by time
+alias lt='l -tr'
+# list files
+# http://unix.stackexchange.com/a/116524/148062
+alias lf='l -p --color=always | grep -v /'
+# list files sort by time
+alias lft='l -ptr --color=always | grep -v /'
 alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 2>\&1/' | sh | grep -v 'no crontab for'"
 # http://stackoverflow.com/a/15157360/4233593#how-to-use-package-installed-locally-in-node-modules
 alias nexec='PATH=$(npm bin):$PATH'
