@@ -16,6 +16,7 @@ alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 
 alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 restart'
 alias tre="tree -a -I 'vendor|node_modules|nbproject|coverage|.git'"
+alias trel="tre -C | less -R"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 alias art='php artisan'
