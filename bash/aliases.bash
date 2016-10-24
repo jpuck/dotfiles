@@ -44,8 +44,3 @@ alias vc='php -S localhost:8080 -t coverage/'
 
 # save change directory
 alias cds='alias cdb="cd $(pwd)"'
-
-# database dev test prod
-# https://github.com/scratchers/dbdtp
-# https://github.com/jpuck/mydtp
-alias db='./bin/dbdtp'
