@@ -44,3 +44,9 @@ alias vc='php -S localhost:8080 -t coverage/'
 
 # save change directory
 alias cds='alias cdb="cd $(pwd)"'
+
+# copy-paste x-clip
+# apt-get install xclip
+# http://stackoverflow.com/a/27456981/4233593
+alias setclip='xclip -selection c'
+alias getclip='xclip -selection clipboard -o'
