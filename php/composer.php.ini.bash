@@ -14,5 +14,5 @@ if [ -n "$which_composer" ]; then
 	cat "$current_php_ini" | grep -v xdebug > "$composer_php_ini";
 	alias c="php -c '$composer_php_ini' '$which_composer'";
 	alias cda="c dumpautoload"
-	export PATH="$PATH:$HOME/.composer/vendor/bin";
+	export PATH="$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$PATH";
 fi
