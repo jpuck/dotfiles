@@ -8,12 +8,15 @@ alias ammend='git commit -a --amend -C HEAD'
 # count git commits http://stackoverflow.com/a/4061706/4233593
 alias cgc='git rev-list --count'
 alias cgca='git rev-list --count --all'
-alias mnf='git merge --no-ff'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
 alias g='git'
 __git_complete g __git_main
+alias m='git merge'
+__git_complete m _git_merge
+alias mnf='git merge --no-ff'
+__git_complete mnf _git_merge
 alias pl='git pull'
 __git_complete pl _git_pull
 alias ph='git push'
