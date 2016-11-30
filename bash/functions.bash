@@ -6,7 +6,7 @@
 genpasswd() {
 	local l=$1
 	[ "$l" == "" ] && l=16
-	tr -dc \\050-\\172 < /dev/urandom | head -c ${l} | xargs
+	tr -dc [:alpha:][:digit:]'{[(</|>)]}~!@#%^&*\-_=+;:,.?' < /dev/urandom | head -c ${l} | xargs
 }
 
 # NOTE: does not count newlines
