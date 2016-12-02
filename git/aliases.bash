@@ -13,6 +13,7 @@ alias cgca='git rev-list --count --all'
 # http://stackoverflow.com/a/15009611/4233593
 alias g='git'
 __git_complete g __git_main
+alias gc='git clone'
 alias m='git merge'
 __git_complete m _git_merge
 alias mnf='git merge --no-ff'
