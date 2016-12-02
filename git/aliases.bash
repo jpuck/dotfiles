@@ -22,12 +22,12 @@ __git_complete pl _git_pull
 alias ph='git push'
 __git_complete ph _git_push
 alias d='git diff -p --stat'
-alias dc='git diff -p --stat --cached'
-alias dm='git difftool -t meld'
-alias dmc='git difftool -t meld --cached'
 __git_complete d _git_diff
+alias dc='git diff -p --stat --cached'
 __git_complete dc _git_diff
+alias dm='git difftool -t meld'
 __git_complete dm _git_diff
+alias dmc='git difftool -t meld --cached'
 __git_complete dmc _git_diff
 alias co='git checkout'
 __git_complete co _git_checkout
