@@ -22,6 +22,7 @@ alias tref="tre -f"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 alias art='php artisan'
+alias artt='art tinker'
 alias t='phpunit'
 alias tt='phpunit --testdox'
 alias k='kate'
