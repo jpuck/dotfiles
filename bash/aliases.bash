@@ -17,6 +17,8 @@ alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 reload'
 alias tre="tree -a -I 'vendor|node_modules|nbproject|coverage|.git'"
 alias trel="tre -C | less -R"
+alias tred="tre -d"
+alias tref="tre -f"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 alias art='php artisan'
