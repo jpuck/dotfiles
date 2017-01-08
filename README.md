@@ -14,3 +14,9 @@ git ignore mostly thanks to [Octocat](https://gist.github.com/octocat/9257657)
 run `./install-or-update.bash`
 
 to remove, run `./uninstall.bash`
+
+## Kate Snippets
+
+create symlinks to xml files in your system snippets directory.
+
+    ln -s /this/repo/kate/snippets/snip.xml ~/.local/share/ktexteditor_snippets/data/snip.xml

@@ -1,0 +1,18 @@
+<snippets filetypes="PHP (HTML)" license="LGPL v3+" name="phpdev" authors="Jeff Puckett" namespace="jpuck">
+ <script>function fileName() { return document.fileName(); }
+function fileUrl() { return document.url(); }
+function encoding() { return document.encoding(); }
+function selection() { return view.selectedText(); }
+function year() { return new Date().getFullYear(); }
+function upper(x) { return x.toUpperCase(); }
+function lower(x) { return x.toLowerCase(); }
+</script>
+ <item>
+  <match>tag</match>
+  <fillin>&lt;${tag}>${cursor}&lt;/${tag}></fillin>
+ </item>
+ <item>
+  <match>lorem</match>
+  <fillin>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</fillin>
+ </item>
+</snippets>
