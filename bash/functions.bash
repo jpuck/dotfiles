@@ -6,7 +6,9 @@
 genpasswd() {
 	local length="$1"
 	[ "$length" == "" ] && length=16
-	tr -dc [:alpha:][:digit:]'{[(</|>)]}~!@#%^&*\-_=+;:,.?' < /dev/urandom | head -c "$length" | xargs
+	# dash is escaped \-
+	tr -dc [:alpha:][:digit:]'{[(</|>)]}~!@#^&\-_=+;:,.?' < /dev/urandom | head -c "$length"
+	echo
 }
 
 # NOTE: does not count newlines
