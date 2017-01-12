@@ -13,3 +13,12 @@ genpasswd() {
 strlen() {
 	echo -n "$1" | wc -m
 }
+
+# http://stackoverflow.com/a/5349842/4233593
+# http://stackoverflow.com/a/5303675/4233593
+printn() {
+    local chars="$2"
+    [ "$chars" == "" ] && chars="a"
+    printf "$chars%.0s" $(eval echo "{1..$1}")
+    echo
+}
