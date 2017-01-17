@@ -19,7 +19,14 @@ genpasswd() {
     local length="$1"
     [ "$length" == "" ] && length=16
     # dash is escaped \-
-    tr -dc [:alpha:][:digit:]'{[(</|>)]}~!@#^&\-_=+;:,.?' < /dev/urandom | head -c "$length"
+    # no backslash \ as escape sequence
+    # no quotes ' " ` for breaking quotations
+    # no space for unquotable systems
+    # no percent % for sprintf
+    # no dollar $ for php
+    # no hash # equals = or colon : for ssmtp http://serverfault.com/q/826875/331028
+    # no asterix * for globbing
+    tr -dc [:alpha:][:digit:]'{[(</|>)]}~!@^&\-_+;,.?' < /dev/urandom | head -c "$length"
 
     (($newline)) && echo
 }
