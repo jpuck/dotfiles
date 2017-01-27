@@ -48,3 +48,8 @@ printn() {
     printf "$chars%.0s" $(eval echo "{1..$1}")
     echo
 }
+
+cpk() {
+    cp "$1" "$2"
+    k "$2"
+}
