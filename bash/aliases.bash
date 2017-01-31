@@ -7,6 +7,8 @@ alias lt='l -tr'
 alias lf='l -p --color=always | grep -v /'
 # list files sort by time
 alias lft='l -ptr --color=always | grep -v /'
+# list full path filename
+alias lsf='readlink --canonicalize'
 
 # show every users crontab
 alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 2>\&1/' | sh | grep -v 'no crontab for'"
