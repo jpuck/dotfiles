@@ -8,6 +8,7 @@ alias ammend='git commit -a --amend -C HEAD'
 # count git commits http://stackoverflow.com/a/4061706/4233593
 alias cgc='git rev-list --count'
 alias cgca='git rev-list --count --all'
+alias gt='git tag | sort -V'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
