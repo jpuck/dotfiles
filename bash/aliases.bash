@@ -23,8 +23,12 @@ alias tred="tre -d"
 alias tref="tre -f"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
+
+# laravel
 alias art='php artisan'
 alias artt='art tinker'
+alias vw='tre resources/views'
+
 alias t='phpunit'
 alias tt='phpunit --testdox'
 alias ttt='phpunit --debug'
