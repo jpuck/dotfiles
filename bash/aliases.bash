@@ -71,3 +71,5 @@ alias cpy='xclip -selection clipboard'
 # requires PHP_CodeSniffer
 # https://github.com/squizlabs/PHP_CodeSniffer
 alias pcs='phpcs -s --colors --standard=PSR2 --report-width=auto'
+
+alias phpspec='vendor/bin/phpspec'
