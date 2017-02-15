@@ -28,6 +28,7 @@ alias brw='byzanz-record-window'
 alias art='php artisan'
 alias artt='art tinker'
 alias vw='tre resources/views'
+alias rl='art route:list'
 
 alias t='phpunit'
 alias tt='phpunit --testdox'
