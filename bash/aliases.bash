@@ -37,6 +37,9 @@ alias k='kate'
 alias less='less --tabs=4'
 alias myr='mysql -u root -p'
 
+# date time
+alias ct='TZ=America/Chicago date "+%I:%M %p"'
+
 # make a file and any folders along the way
 alias mk='install -m=664 -b -D /dev/null'
 # make an executable and any folders along the way
