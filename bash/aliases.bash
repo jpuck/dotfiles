@@ -78,3 +78,4 @@ alias pcs='phpcs -s --colors --standard=PSR2 --report-width=auto'
 
 alias phpspec='vendor/bin/phpspec'
 alias phpunit='./vendor/bin/phpunit'
+alias dusk='art dusk'
