@@ -24,15 +24,6 @@ alias tref="tre -f"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 
-# laravel
-alias art='php artisan'
-alias artt='art tinker'
-alias vw='tre resources/views'
-alias rl='art route:list'
-
-alias t='phpunit'
-alias tt='phpunit --testdox'
-alias ttt='phpunit --debug'
 alias k='kate'
 alias less='less --tabs=4'
 alias myr='mysql -u root -p'
@@ -75,7 +66,3 @@ alias cpy='xclip -selection clipboard'
 # requires PHP_CodeSniffer
 # https://github.com/squizlabs/PHP_CodeSniffer
 alias pcs='phpcs -s --colors --standard=PSR2 --report-width=auto'
-
-alias phpspec='vendor/bin/phpspec'
-alias phpunit='./vendor/bin/phpunit'
-alias dusk='art dusk'

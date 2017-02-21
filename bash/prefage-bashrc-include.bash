@@ -34,6 +34,10 @@ if $(command -v git >/dev/null 2>&1); then
 
 fi
 
+if $(command -v php >/dev/null 2>&1); then
+    . "$prefage_directory"/php/aliases.bash
+fi
+
 # set tab width
 tabs -4
 
