@@ -10,6 +10,11 @@ alias lft='l -ptr --color=always | grep -v /'
 # list full path filename
 alias lsf='readlink --canonicalize'
 
+alias tre="tree -a -I 'vendor|node_modules|nbproject|coverage|.git|storage'"
+alias trel="tre -C | less -R"
+alias tred="tre -d"
+alias tref="tre -f"
+
 # show every users crontab
 alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 2>\&1/' | sh | grep -v 'no crontab for'"
 
@@ -17,10 +22,6 @@ alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 
 # http://stackoverflow.com/a/15157360/4233593#how-to-use-package-installed-locally-in-node-modules
 alias nexec='PATH=$(npm bin):$PATH'
 alias asr='sudo service apache2 reload'
-alias tre="tree -a -I 'vendor|node_modules|nbproject|coverage|.git'"
-alias trel="tre -C | less -R"
-alias tred="tre -d"
-alias tref="tre -f"
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 
