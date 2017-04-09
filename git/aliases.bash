@@ -79,3 +79,5 @@ git_clean_merged_all(){
 }
 alias gca="git_clean_merged_all"
 __git_complete gca _git_pull
+
+alias committers='git log --format=fuller | grep -E "^(Author:|Commit:)" | sort | uniq'
