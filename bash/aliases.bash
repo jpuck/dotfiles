@@ -46,7 +46,7 @@ alias rd='rm -rf'
 alias deltrailspaces="sed -i 's/\s*$//'"
 
 # view coverage
-alias vc='php -S localhost:8080 -t coverage/'
+alias vc='php -S localhost:8686 -t ./tests/coverage/'
 
 # save change directory
 alias cds='alias cdb="cd $(pwd)"'
