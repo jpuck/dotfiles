@@ -49,6 +49,7 @@ __git_complete showm _git_show
 # aliased aliases
 alias s='git s'
 alias la='git la'
+alias lr='git lr'
 alias b='git b'
 alias skpd='git skipped'
 
