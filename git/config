@@ -1,27 +1,27 @@
 [core]
-	editor = nano -w
-	pager = less --tabs=4
+    editor = nano -w
+    pager = less --tabs=4
 [push]
-	default = upstream
+    default = upstream
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [alias]
-	b  = branch -avv
-	r  = remote -v
-	l  = log --graph --format='%C(auto)%h %s%d %Cgreen%ar'
-	la = !git l --all
-	lb = !git l --branches
-	lr = !git l master..HEAD
-	dc = diff --cached
-	skipped = !git ls-files -v | grep --color "^S"
-	s  = !git status && echo && git skipped
-	# http://stackoverflow.com/a/39466418/4233593
-	alias = !git config --list | grep ^alias\\. | cut -c 7- | grep -Ei --color \"$1\" "#"
-	showm = "!f(){ if [ -z $1 ]; then c='HEAD'; else c=$1; fi; git difftool --tool=meld -y $c~..$c; }; f"
-	rnotes = !git log --format="%s" --reverse --first-parent $(git describe --abbrev=0 --tags)..HEAD
-	# https://developmentality.wordpress.com/2010/09/07/git-how-to-easily-remove-deleted-files/
-	rmd = !git rm `git ls-files --deleted`
+    b  = branch -avv
+    r  = remote -v
+    l  = log --graph --format='%C(auto)%h %s%d %Cgreen%ar'
+    la = !git l --all
+    lb = !git l --branches
+    lr = !git l master..HEAD
+    dc = diff --cached
+    skipped = !git ls-files -v | grep --color "^S"
+    s  = !git status && echo && git skipped
+    # http://stackoverflow.com/a/39466418/4233593
+    alias = !git config --list | grep ^alias\\. | cut -c 7- | grep -Ei --color \"$1\" "#"
+    showm = "!f(){ if [ -z $1 ]; then c='HEAD'; else c=$1; fi; git difftool --tool=meld -y $c~..$c; }; f"
+    rnotes = !git log --format="%s" --reverse --first-parent $(git describe --abbrev=0 --tags)..HEAD
+    # https://developmentality.wordpress.com/2010/09/07/git-how-to-easily-remove-deleted-files/
+    rmd = !git rm `git ls-files --deleted`
 [color]
-	ui = true
+    ui = true
 [advice]
-	statusHints = off
+    statusHints = off
