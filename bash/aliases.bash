@@ -69,3 +69,4 @@ alias cpy='xclip -selection clipboard'
 alias pcs='phpcs -s --colors --standard=PSR2 --report-width=auto'
 
 alias guetzli='docker run --rm -it -v $PWD:/guetzli fabiang/guetzli'
+alias sci='ssh-copy-id -i ~/.ssh/id_rsa.pub'
