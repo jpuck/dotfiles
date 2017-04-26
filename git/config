@@ -25,3 +25,5 @@
     ui = true
 [advice]
     statusHints = off
+[status]
+    showUntrackedFiles = all
