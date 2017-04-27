@@ -82,3 +82,10 @@ alias gca="git_clean_merged_all"
 __git_complete gca _git_pull
 
 alias committers='git log --format=fuller | grep -E "^(Author:|Commit:)" | sort | uniq'
+
+alias anonymize_git_branch='git filter-branch -f --env-filter "
+    GIT_AUTHOR_NAME=$(tr -dc [:lower:][:digit:] < /dev/urandom | head -c 40)
+    GIT_AUTHOR_EMAIL=$(tr -dc [:lower:][:digit:] < /dev/urandom | head -c 40)
+    GIT_COMMITTER_NAME=$(tr -dc [:lower:][:digit:] < /dev/urandom | head -c 40)
+    GIT_COMMITTER_EMAIL=$(tr -dc [:lower:][:digit:] < /dev/urandom | head -c 40)
+" HEAD'
