@@ -8,6 +8,9 @@ credentials.local.*
 # kate cache temp files
 *.kate-swp
 
+# vim swap files
+*.swp
+
 # open-office cache temp files
 .~lock.*
 
