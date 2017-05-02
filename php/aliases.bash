@@ -7,9 +7,8 @@ alias ms='art migrate:status'
 alias m='art migrate'
 
 # testing
-alias phpunit='docker run --rm -it -v "$PWD":/code gpgl/test-core ./vendor/bin/phpunit'
-alias t='phpunit'
-alias tt='phpunit --testdox'
-alias ttt='phpunit --debug'
+alias t='docker run --rm -it -v "$PWD":/code gpgl/test-core'
+alias tt='t ./vendor/bin/phpunit --testdox'
+alias ttt='t ./vendor/bin/phpunit --debug'
 alias phpspec='vendor/bin/phpspec'
 alias dusk='art dusk --stop-on-failure'
