@@ -30,7 +30,7 @@ if $(command -v git >/dev/null 2>&1); then
 		source $prefage_directory/bash/host-color.bash
 	fi
 
-	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $user_color; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime$ $reset"
+	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $user_color; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
 
 fi
 
