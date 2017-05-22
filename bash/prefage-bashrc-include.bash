@@ -42,6 +42,11 @@ fi
 # set tab width
 tabs -4
 
+# trump with any local aliases
+if [ -f ~/.aliases.bash ]; then
+    . ~/.aliases.bash
+fi
+
 # DO THIS LAST to keep clean console on launch
 # get timestamp at command execute
 # http://unix.stackexchange.com/a/304270/148062
