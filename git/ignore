@@ -4,6 +4,7 @@ vendor/
 scratch.*
 credentials.local.*
 *.pdo.php
+*.env
 
 # kate cache temp files
 *.kate-swp
