@@ -1,6 +1,6 @@
 # prefage
 this is a compilation of common preferences for bash prompt, aliases,  
-and git version 1.7.10+ tools (tab completion, custom prompt, & meld for desktops). 
+and git version 1.7.10+ tools (tab completion, custom prompt, & meld for desktops).
 
 .bashrc originally taken from stock [Ubuntu](http://www.ubuntu.com/) 14.04 desktop  
 
@@ -20,3 +20,9 @@ to remove, run `./uninstall.bash`
 create symlinks to xml files in your system snippets directory.
 
     ln -s /this/repo/kate/snippets/snip.xml ~/.local/share/ktexteditor_snippets/data/snip.xml
+
+## Atom
+
+Restart atom after symlinking style sheet.
+
+    ln -s /this/repo/atom/styles.less ~/.atom/styles.less
