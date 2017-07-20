@@ -51,6 +51,9 @@ alias vc='php -S localhost:8686 -t ./tests/coverage/'
 # save change directory
 alias cds='alias cdb="cd $(pwd)"'
 
+# copy print working directory
+alias cpwd='echo -n "$PWD" | cpy'
+
 # copy-paste x-clip
 # apt-get install xclip
 # http://stackoverflow.com/a/27456981/4233593
