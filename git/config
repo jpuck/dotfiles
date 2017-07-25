@@ -1,5 +1,5 @@
 [core]
-    editor = nano -w
+    editor = vim
     pager = less --tabs=4
 [push]
     default = upstream
