@@ -15,6 +15,8 @@ alias gt='git tag | sort -V'
 alias g='git'
 __git_complete g __git_main
 alias gc='git clone'
+alias f='git fetch --prune'
+__git_complete f _git_fetch
 alias m='git merge'
 __git_complete m _git_merge
 alias mnf='git merge --no-ff'
