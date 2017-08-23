@@ -1,6 +1,10 @@
 [core]
     editor = vim
     pager = less --tabs=4
+[user]
+	email = jeff@jeffpuckett.com
+	name = Jeff Puckett
+	signingkey = 60C427CB
 [push]
     default = upstream
 [merge]
