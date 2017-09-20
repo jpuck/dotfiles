@@ -75,3 +75,7 @@ alias guetzli='docker run --rm -it -v $PWD:/guetzli fabiang/guetzli'
 alias sci='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
 alias dcompose='docker-compose'
+
+alias upd='sudo apt update && apt list --upgradable'
+
+alias upg='sudo apt auto-remove -y && sudo apt upgrade -y'
