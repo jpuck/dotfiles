@@ -50,6 +50,7 @@ alias vc='php -S localhost:8686 -t ./tests/coverage/'
 
 # save change directory
 alias cds='alias cdb="cd $(pwd)"'
+alias cdb='cds'
 
 # copy print working directory
 alias cpwd='echo -n "$PWD" | cpy'
