@@ -25,6 +25,7 @@ alias asr='sudo service apache2 reload'
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 
+alias at='atom -a .'
 alias k='kate'
 alias less='less --tabs=4'
 alias myr='mysql -u root -p'
