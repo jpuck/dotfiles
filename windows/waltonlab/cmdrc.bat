@@ -24,6 +24,7 @@ doskey ammend=git commit --amend --no-edit
 doskey show=git show $*
 doskey showl=git show --stat --summary $*
 doskey gr=git remote -v
+doskey f=git fetch --prune $*
 doskey ph=git push $*
 doskey pl=git pull $*
 
