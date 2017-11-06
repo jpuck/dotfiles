@@ -9,6 +9,7 @@ alias ammend='git commit -a --amend -C HEAD'
 alias cgc='git rev-list --count'
 alias cgca='git rev-list --count --all'
 alias gt='git tag | sort -V'
+alias gr='git remote -v'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
