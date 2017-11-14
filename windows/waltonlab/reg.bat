@@ -9,6 +9,9 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hi
 net use S: \\Ent-Storage1.walton.uark.edu\Enterprise$
 Powershell.exe -executionpolicy Unrestricted -File  S:\jpucket\dotfiles\windows\waltonlab\rc.ps1
 
+exit
+
+:: pause before end
 pause
 cls
 exit
