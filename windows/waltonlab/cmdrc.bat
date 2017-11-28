@@ -8,7 +8,7 @@ doskey rm=del $*
 :: git
 git config --global user.name "Jeff Puckett"
 git config --global user.email "jeff@jeffpuckett.com"
-doskey la=git log --graph --format='%C(auto)%h %s%d %Cgreen%ar'
+doskey la=git log --graph --format="%%C(auto)%%h %%s%%d %%Cgreen%%ar"
 doskey s=git status
 doskey b=git branch -avv
 doskey co=git checkout $*
