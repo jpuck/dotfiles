@@ -26,7 +26,7 @@ doskey showl=git show --stat --summary $*
 doskey gr=git remote -v
 doskey f=git fetch --prune $*
 doskey ph=git push $*
-doskey pl=git pull $*
+doskey pl=git pull --rebase=preserve $*
 
 :: bin
 doskey vim="C:\Program Files\Git\usr\bin\vim" $*

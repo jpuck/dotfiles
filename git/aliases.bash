@@ -22,7 +22,7 @@ alias m='git merge'
 __git_complete m _git_merge
 alias mnf='git merge --no-ff'
 __git_complete mnf _git_merge
-alias pl='git pull'
+alias pl='git pull --rebase=preserve'
 __git_complete pl _git_pull
 alias ph='git push'
 __git_complete ph _git_push
