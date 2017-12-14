@@ -2,6 +2,7 @@ node_modules/
 bower_components/
 vendor/
 scratch.*
+*.scratch.*
 credentials.local.*
 *.pdo.php
 *.env
