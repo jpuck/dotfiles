@@ -65,6 +65,7 @@ alias getclip='xclip -selection clipboard -o'
 # get user path for sudo
 # http://stackoverflow.com/a/29400598/4233593
 alias mysudo='sudo -E env "PATH=$PATH"'
+alias nohist='unset HISTFILE'
 
 # requires xclip
 alias cpy='xclip -selection clipboard'
