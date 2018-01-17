@@ -7,8 +7,8 @@
 # Delete the symlink for xdebug.ini from the
 # "Scan for additional .ini files in:" directory.
 
-which_composer="$(which composer)";
-if [ -n "$which_composer" ]; then
+if $(command -v composer >/dev/null 2>&1); then
+	which_composer="$(which composer)";
 	composer_php_ini="$prefage_directory/php/composer.php.ini";
 	current_php_ini="$(php --ini | grep 'Loaded Configuration File:' | awk '{print $4}')";
 	cat "$current_php_ini" | grep -v xdebug > "$composer_php_ini";
