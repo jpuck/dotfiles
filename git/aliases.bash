@@ -10,6 +10,7 @@ alias cgc='git rev-list --count'
 alias cgca='git rev-list --count --all'
 alias gt='git tag | sort -V'
 alias gr='git remote -v'
+alias ltag='git tag --sort -version:refname'
 
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
