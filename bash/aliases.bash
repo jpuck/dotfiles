@@ -25,6 +25,10 @@ alias asr='sudo service apache2 reload'
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 
+# mysql
+# copy pager command for horizontal scrolling
+alias mysqlpager='echo "pager less -SFX -# 10" | cpy'
+
 alias at='atom -a .'
 alias k='kate'
 alias less='less --tabs=4'
