@@ -15,7 +15,7 @@
     l  = log --graph --format='%C(auto)%h%d %s %C(green)%cr %C(bold blue)%an'
     la = !git l --all
     lb = !git l --branches
-    lr = !git l master..HEAD
+    lr = !git l origin/master..HEAD
     dc = diff --cached
     skipped = !git ls-files -v | grep --color "^S"
     s  = !git status && echo && git skipped
