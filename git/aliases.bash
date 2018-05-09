@@ -55,6 +55,7 @@ alias s='git s'
 alias la='git la'
 alias lr='git lr'
 alias b='git branch'
+__git_complete b _git_branch
 alias bv='git branch -vv'
 alias ba='git branch -avv'
 alias skpd='git skipped'
