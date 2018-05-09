@@ -54,7 +54,9 @@ __git_complete showm _git_show
 alias s='git s'
 alias la='git la'
 alias lr='git lr'
-alias b='git b'
+alias b='git branch'
+alias bv='git branch -vv'
+alias ba='git branch -avv'
 alias skpd='git skipped'
 
 # scripts

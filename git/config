@@ -10,7 +10,6 @@
 [merge]
     conflictstyle = diff3
 [alias]
-    b  = branch -avv
     r  = remote -v
     l  = log --graph --format='%C(auto)%h%d %s %C(green)%cr %C(bold blue)%an'
     la = !git l --all
