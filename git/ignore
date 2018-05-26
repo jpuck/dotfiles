@@ -7,6 +7,9 @@ credentials.local.*
 *.pdo.php
 *.env
 
+# merge conflict files
+*.orig
+
 # kate cache temp files
 *.kate-swp
 
