@@ -54,6 +54,7 @@ __git_complete showm _git_show
 alias s='git s'
 alias la='git la'
 alias gl='git l'
+__git_complete gl _git_log
 alias lr='git lr'
 alias b='git branch'
 __git_complete b _git_branch
