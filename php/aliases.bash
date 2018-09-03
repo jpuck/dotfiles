@@ -1,5 +1,6 @@
 # laravel
 alias art='php artisan'
+alias sv='php artisan serve'
 alias artt='art tinker'
 alias vw='tre resources/views'
 alias rl='art route:list'
