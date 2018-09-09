@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+convert "$1" -print "Size: %wx%h\n" /dev/null
