@@ -10,7 +10,7 @@ alias lft='l -ptr --color=always | grep -v /'
 # list full path filename
 alias lsf='readlink --canonicalize'
 alias rmtorr='rd ~/Downloads/torr/*'
-alias tre="tree -aC -I 'vendor|node_modules|nbproject|coverage|.git|storage'"
+alias tre="tree -aC -I 'vendor|node_modules|nbproject|coverage|.git|storage|.idea'"
 alias trel="tre -C | less -R"
 alias tred="tre -d"
 alias tref="tre -f"
