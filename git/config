@@ -9,9 +9,9 @@
     default = upstream
 [merge]
     conflictstyle = diff3
+    tool = vimdiff
 [mergetool]
     keepBackup = false
-    tool = meld
 [alias]
     r  = remote -v
     l  = log --graph --format='%C(auto)%h%d %s %C(green)%cr %C(bold blue)%an'
