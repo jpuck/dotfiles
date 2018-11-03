@@ -25,6 +25,7 @@ alias webpack='npx webpack'
 alias asr='sudo service apache2 reload'
 alias o='xdg-open'
 alias brw='byzanz-record-window'
+alias nt='npm run test'
 
 # mysql
 # copy pager command for horizontal scrolling
