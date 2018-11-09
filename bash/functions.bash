@@ -72,6 +72,11 @@ function mkdir_for_files(){
         mkdir "$directory/$name"
     done
 }
+
 function lessjson() {
     jq -C . "$1" | less -R
+}
+
+function jcurl() {
+    curl "$@" | lessjson -
 }
