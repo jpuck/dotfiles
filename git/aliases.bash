@@ -60,6 +60,7 @@ alias b='git branch'
 __git_complete b _git_branch
 alias bv='git branch -vv'
 alias ba='git branch -avv'
+alias bg='ba | grep'
 alias skpd='git skipped'
 
 # scripts
