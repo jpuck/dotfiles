@@ -55,6 +55,11 @@ alias s='git s'
 alias la='git la'
 alias gl='git l'
 __git_complete gl _git_log
+function le()
+{
+    git l "$@" --color | emojify | less -R
+}
+__git_complete le _git_log
 alias lr='git lr'
 alias b='git branch'
 __git_complete b _git_branch
