@@ -1,8 +1,18 @@
 bgcpy()
 {
-    firstBranch="$(bg "$1" | awk '{print $1;}')";
-    echo "$firstBranch" | cpy
-    echo "$firstBranch"
+    # using sub shells in this function allow for late alias expansion
+    branches="$(bg "$1" | awk '{print $1;}')";
+    firstBranch="$(echo "$branches" | head -n 1)"
+    otherBranches="$(echo "$branches" | tail -n +2)"
+
+    local yellow="\033[93m"
+    local red="\033[31m"
+
+    echo -e "$yellow$firstBranch"
+    echo -e "$red$otherBranches"
+
+    # copy the first one to the clipboard
+    $(echo "$firstBranch" | cpy);
 }
 
 ########### personal functions you can delete #################
