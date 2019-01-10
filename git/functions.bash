@@ -1,3 +1,10 @@
+bgcpy()
+{
+    firstBranch="$(bg "$1" | awk '{print $1;}')";
+    echo "$firstBranch" | cpy
+    echo "$firstBranch"
+}
+
 ########### personal functions you can delete #################
 ouframe(){
   git clone -o ouframe git@bitbucket.org:waltoncollegeofbusiness/omni.frame.git $1
