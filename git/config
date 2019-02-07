@@ -34,3 +34,5 @@
     statusHints = off
 [status]
     showUntrackedFiles = all
+[diff]
+    wsErrorHighlight = all
