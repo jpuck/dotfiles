@@ -1,3 +1,5 @@
+export TZ=UTC
+
 # move to working directory
 export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 alias pref="cd $prefage_directory"
