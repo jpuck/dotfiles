@@ -78,5 +78,5 @@ function lessjson() {
 }
 
 function jcurl() {
-    curl "$@" | lessjson -
+    curl -H 'Content-Type: application/json' -H 'Accept: application/json' "$@" | lessjson -
 }
