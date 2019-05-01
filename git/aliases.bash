@@ -16,6 +16,9 @@ alias ltag='git tag --sort -version:refname'
 # reset to remote
 alias rr='git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"'
 
+# copy modified
+alias cpd="git ls-files -m -o --exclude-standard | tr '\n' ' ' | cpy"
+
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
 alias g='git'
