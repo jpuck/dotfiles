@@ -13,6 +13,9 @@ alias gt='git tag | sort -V'
 alias gr='git remote -v'
 alias ltag='git tag --sort -version:refname'
 
+# reset to remote
+alias rr='git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"'
+
 # tab completion
 # http://stackoverflow.com/a/15009611/4233593
 alias g='git'
