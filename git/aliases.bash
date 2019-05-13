@@ -12,6 +12,7 @@ alias cgca='git rev-list --count --all'
 alias gt='git tag | sort -V'
 alias gr='git remote -v'
 alias ltag='git tag --sort -version:refname'
+alias s='bash -c "git status -sb && git ls-files -v | grep --color ^S"'
 
 # reset to remote
 alias rr='git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"'
@@ -58,7 +59,6 @@ alias showm='git showm'
 __git_complete showm _git_show
 
 # aliased aliases
-alias s='git s'
 alias la='git la'
 alias gl='git l'
 __git_complete gl _git_log
