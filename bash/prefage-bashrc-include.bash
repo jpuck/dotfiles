@@ -1,4 +1,5 @@
 export TZ=UTC
+export HISTTIMEFORMAT="%FT%T "
 
 # move to working directory
 export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
