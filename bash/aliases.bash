@@ -15,6 +15,8 @@ alias trel="tre -C | less -R"
 alias tred="tre -d"
 alias tref="tre -f"
 
+alias m="tmux attach"
+
 # show every users crontab
 alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 2>\&1/' | sh | grep -v 'no crontab for'"
 
