@@ -84,3 +84,6 @@ alias dcompose='docker-compose'
 alias upd='pref && pl && cd - && sudo apt update && apt list --upgradable'
 
 alias upg='sudo apt auto-remove -y && sudo apt upgrade -y'
+
+alias pscollapse='PS1_BACKUP="$PS1" PS1="\[\033[01;32m\]\! \[\033[0m\]"'
+alias psrestore='PS1="$PS1_BACKUP"'
