@@ -79,6 +79,7 @@ alias cpy='xclip -selection clipboard'
 alias guetzli='docker run --rm -it -v $PWD:/guetzli fabiang/guetzli'
 alias sci='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
+alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dcompose='docker-compose'
 
 alias upd='pref && pl && cd - && sudo apt update && apt list --upgradable'
