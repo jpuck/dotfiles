@@ -81,6 +81,8 @@ alias sci='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
 alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dcompose='docker-compose'
+alias up='dcompose up -d'
+alias dn='dcompose down'
 
 alias upd='pref && pl && cd - && sudo apt update && apt list --upgradable'
 
