@@ -26,14 +26,14 @@ if $(command -v git >/dev/null 2>&1); then
 	# '\W' adds the name of the current directory
 	# '\$(__git_ps1)' adds git-related stuff
 
-	# host & user color can be overridden in host-color.bash
-	host_color=$green
-	user_color=$lime
-	if [ -f $prefage_directory/bash/host-color.bash ]; then
-		source $prefage_directory/bash/host-color.bash
-	fi
+        if [ -z "$HOSTNAME_COLOR" ]; then
+            HOSTNAME_COLOR=$green
+        fi
+        if [ -z "$USERNAME_COLOR" ]; then
+            USERNAME_COLOR=$lime
+        fi
 
-	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $user_color; fi)\u$darkgraylight@$host_color\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
+	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $USERNAME_COLOR; fi)\u$darkgraylight@$HOSTNAME_COLOR\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
 
 fi
 
