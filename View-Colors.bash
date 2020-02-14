@@ -52,7 +52,8 @@ for FG in {16..255}; do
   echo -e "\033[0;38;5;${FG}m0;38;5;${FG}m \033[1;38;5;${FG}m1;38;5;${FG}m"
 done
 
-echo 'special sequence to initiate prompt color change: \033[
+echo '
+special sequence to initiate prompt color change: \033[
 m: terminate
 separate values with ;
 0: normal
@@ -98,3 +99,5 @@ and hostname colors to this script as parameters 1 & 2
 '
 echo -e "$username_color$(whoami)\033[0m @ $hostname_color$(hostname)\033[0m $
 "
+echo
+echo try './View-Colors.bash | less -R'
