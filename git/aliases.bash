@@ -32,7 +32,7 @@ alias f='git fetch --prune'
 __git_complete f _git_fetch
 alias mnf='git merge --no-ff'
 __git_complete mnf _git_merge
-alias pl='git pull --rebase=preserve'
+alias pl='git pull --rebase=merges'
 __git_complete pl _git_pull
 alias ph='git push'
 __git_complete ph _git_push
