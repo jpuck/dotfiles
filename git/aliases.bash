@@ -14,6 +14,9 @@ alias gr='git remote -v'
 alias ltag='git tag --sort -version:refname'
 alias s='bash -c "git status -sb && git ls-files -v | grep --color ^S"'
 
+# https://stackoverflow.com/a/59912825/4233593
+alias git-prune-local="git fetch --all -p && git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
+
 # reset to remote
 alias rr='git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"'
 
