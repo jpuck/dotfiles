@@ -48,6 +48,10 @@ done
 
 echo -e "\n"
 
+for FG in {16..255}; do
+  echo -e "\033[0;38;5;${FG}m0;38;5;${FG}m \033[1;38;5;${FG}m1;38;5;${FG}m"
+done
+
 echo 'special sequence to initiate prompt color change: \033[
 m: terminate
 separate values with ;
