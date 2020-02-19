@@ -80,3 +80,8 @@ function lessjson() {
 function jcurl() {
     curl -H 'Content-Type: application/json' -H 'Accept: application/json' "$@" | lessjson -
 }
+
+function stop()
+{
+    docker-compose stop $1 && docker-compose rm -f $1
+}
