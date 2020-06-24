@@ -11,9 +11,18 @@ git complete & prompt settings taken from [Udacity](https://www.udacity.com) cou
 git ignore mostly thanks to [Octocat](https://gist.github.com/octocat/9257657)
 
 ## getting started
+
+clone to home directory
+
 run `./install-or-update.bash`
 
 to remove, run `./uninstall.bash`
+
+## tmux
+
+install [tmux plugin manager][tpm]
+
+    ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 ## Kate Snippets
 
@@ -26,3 +35,5 @@ create symlinks to xml files in your system snippets directory.
 Restart atom after symlinking style sheet.
 
     ln -s /this/repo/atom/styles.less ~/.atom/styles.less
+
+[tpm]:https://github.com/tmux-plugins/tpm
