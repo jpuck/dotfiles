@@ -1,16 +1,15 @@
 #!/bin/bash
 
-## example .env
-#MOVE_USERNAME="jeff"
-#MOVE_HOSTNAME="example.com"
-#MOVE_SOURCE="/home/jeff/photos"
-#MOVE_DESTINATION="/srv/backup"
-
 set -e
 
-cd "$MOVE_SOURCE"
+source="$1"
+username="$2"
+hostname="$3"
+destination="$4"
 
-sftp "$MOVE_USERNAME@$MOVE_HOSTNAME:$MOVE_DESTINATION" << SFTP_PUT
+cd "$source"
+
+sftp "$username@$hostname:$destination" << SFTP_PUT
     put *
     quit
 SFTP_PUT
