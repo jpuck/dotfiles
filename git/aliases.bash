@@ -19,6 +19,7 @@ alias git-prune-local="git fetch --all -p && git branch -vv | grep ': gone]' | a
 
 # reset to remote
 alias rr='git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"'
+alias rh='git reset --hard'
 
 # copy modified
 alias cpd="git ls-files -m -o --exclude-standard | tr '\n' ' ' | cpy"
