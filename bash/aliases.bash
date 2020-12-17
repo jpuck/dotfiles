@@ -16,6 +16,8 @@ alias tred="tre -d"
 alias tref="tre -f"
 
 alias m="tmux attach"
+alias mt='tmux attach -t'
+alias ml='tmux ls'
 alias n="tmux new"
 alias x="exit"
 
