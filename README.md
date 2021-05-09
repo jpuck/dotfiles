@@ -24,6 +24,10 @@ install [tmux plugin manager][tpm]
 
     ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+don't forget to install the plugins
+
+> Press `prefix` + `I` (capital i, as in Install) to fetch the plugin
+
 ## Kate Snippets
 
 create symlinks to xml files in your system snippets directory.
