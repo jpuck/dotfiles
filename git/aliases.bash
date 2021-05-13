@@ -60,22 +60,20 @@ __git_complete showl _git_show
 alias showm='git showm'
 __git_complete showm _git_show
 
-# aliased aliases
-alias la='git la'
-alias gl='git l'
+alias gl="git log --graph --format='%C(green)%as %C(auto)%h%d %C(bold blue)%an %C(auto)%s'"
+alias la='gl --all'
 __git_complete gl _git_log
 function le()
 {
-    git l "$@" --color | emojify | less -R
+    gl "$@" --color | emojify | less -R
 }
 __git_complete le _git_log
-alias lr='git lr'
 alias b='git branch'
 __git_complete b _git_branch
 alias bv='git branch -vv'
 alias ba='git branch -avv'
 alias bg='ba | grep'
-alias skpd='git skipped'
+alias skpd='git ls-files -v | grep --color "^S"'
 
 # scripts
 alias gup="$prefage_directory/git/upstream.clone.bash"
