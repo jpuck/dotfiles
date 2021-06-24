@@ -13,6 +13,9 @@ if [ ! -f ~/.bashrc ]; then
     touch ~/.bashrc
 fi
 
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+
 # include bash resources
 # check if references already in bashrc
 if $(grep -q "source $prefage_directory/bash/prefage-bashrc-include.bash" ~/.bashrc); then
