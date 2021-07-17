@@ -1,7 +1,11 @@
 alias a='git add'
 alias au='git add --update'
-alias cam='git commit -am'
-alias cmm='git commit -m'
+function cam() {
+    git commit -am "$*"
+}
+function cmm() {
+    git commit -m "$*"
+}
 alias cma='git commit --amend --no-edit'
 alias skp='git update-index --skip-worktree'
 alias noskp='git update-index --no-skip-worktree'
