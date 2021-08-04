@@ -18,7 +18,13 @@ alias tref="tre -f"
 alias m="tmux attach"
 alias mt='tmux attach -t'
 alias ml='tmux ls'
-alias n="tmux new"
+n () {
+    if [ -z "$1" ]; then
+        tmux new
+    else
+        tmux new -s "$1"
+    fi
+}
 alias x="exit"
 
 # show every users crontab
