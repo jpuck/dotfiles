@@ -15,14 +15,19 @@ alias trel="tre -C | less -R"
 alias tred="tre -d"
 alias tref="tre -f"
 
-alias m="tmux attach"
-alias mt='tmux attach -t'
 alias ml='tmux ls'
 n () {
     if [ -z "$1" ]; then
         tmux new
     else
         tmux new -s "$1"
+    fi
+}
+m () {
+    if [ -z "$1" ]; then
+        tmux attach
+    else
+        tmux attach -t "$1"
     fi
 }
 alias x="exit"
