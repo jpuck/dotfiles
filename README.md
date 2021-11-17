@@ -14,6 +14,9 @@ git ignore mostly thanks to [Octocat](https://gist.github.com/octocat/9257657)
 
 clone to home directory
 
+*optional* add `HOSTNAME_COLOR=...` to `.bashrc`
+codes available in [colors.bash](./bash/colors.bash)
+
 run `./install-or-update.bash`
 
 to remove, run `./uninstall.bash`
