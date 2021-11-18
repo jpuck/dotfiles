@@ -1,4 +1,5 @@
-# prefage
+# .files
+
 this is a compilation of common preferences for bash prompt, aliases,  
 and git version 1.7.10+ tools (tab completion, custom prompt, & meld for desktops).
 
