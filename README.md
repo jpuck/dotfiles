@@ -23,11 +23,17 @@ to remove, run `./uninstall.bash`
 
 ## tmux
 
-install [tmux plugin manager][tpm]
+script will install [tmux plugin manager][tpm]
 
-don't forget to install the plugins
+but you need to manually install the plugins
 
 > Press `prefix` + `I` (capital i, as in Install) to fetch the plugin
+
+customize the [status bar background color][tmux-bg-color] in `~/.aliases.bash`
+
+```
+export TMUX_STATUS_BG=colour240
+```
 
 ## Kate Snippets
 
@@ -42,3 +48,4 @@ Restart atom after symlinking style sheet.
     ln -s /this/repo/atom/styles.less ~/.atom/styles.less
 
 [tpm]:https://github.com/tmux-plugins/tpm
+[tmux-bg-color]:https://unix.stackexchange.com/a/60969/148062
