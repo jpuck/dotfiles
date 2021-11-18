@@ -7,6 +7,13 @@ prefage_directory=$(pwd)
 # remove old prefage files
 ./uninstall.bash
 
+# install tmux plugin manager if doesn't exist
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo installing tmux plugin manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    echo PRESS PREFIX + I TO INSTALL PLUGINS
+fi
+
 # create bashrc if it doesn't exist
 if [ ! -f ~/.bashrc ]; then
     echo "creating ~/.bashrc"
