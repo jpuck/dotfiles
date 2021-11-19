@@ -4,6 +4,10 @@ set autoread
 set wrap linebreak
 syntax on
 
+" show filename status bar
+" https://vi.stackexchange.com/a/14763/27303
+set laststatus=2
+
 " show tab chars
 set list
 set listchars=tab:▸▸
