@@ -49,8 +49,6 @@ alias nt='npm run test'
 # copy pager command for horizontal scrolling
 alias mysqlpager='echo "pager less -SFX -# 10" | cpy'
 
-alias at='atom -a .'
-alias k='kate'
 alias less='less --tabs=4'
 alias myr='mysql -u root -p'
 
@@ -72,7 +70,6 @@ alias deltrailspaces="sed -i 's/\s*$//'"
 
 # save change directory
 alias cds='alias cdb="cd "$(pwd)""'
-alias cdb='cds'
 
 # copy print working directory
 alias cpwd='echo -n "$PWD" | cpy'
@@ -92,7 +89,6 @@ alias nohist='unset HISTFILE'
 alias cpy='xclip -selection clipboard'
 
 alias guetzli='docker run --rm -it -v $PWD:/guetzli fabiang/guetzli'
-alias sci='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
 alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dcompose='docker-compose'
@@ -100,7 +96,6 @@ alias up='dcompose up -d'
 alias dn='dcompose down'
 
 alias upd='pref && pl && cd - && sudo apt update && apt list --upgradable'
-
 alias upg='sudo apt auto-remove -y && sudo apt upgrade -y'
 
 alias pscollapse='PS1_BACKUP="$PS1" PS1="\[\033[01;32m\]\! \[\033[0m\]"'
