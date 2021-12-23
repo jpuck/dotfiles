@@ -66,6 +66,9 @@ alias mkd='mkdir -p'
 # remove directory
 alias rd='rm -rf'
 
+# rename all files to lowercase
+alias tolower="rename -f 'y/A-Z/a-z/' *"
+
 # delete trailing spaces from a file
 # http://stackoverflow.com/a/20521936/4233593
 alias deltrailspaces="sed -i 's/\s*$//'"
