@@ -1,5 +1,5 @@
 # list
-alias l='ls -lah --time-style="+%Y-%m-%dT%T %a"'
+alias l='ls -lah --color --time-style="+%Y-%m-%dT%T %a"'
 # list sort by time
 alias lt='l -tr'
 # list files
