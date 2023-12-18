@@ -9,7 +9,6 @@ alias lf='l -p --color=always | grep -v /'
 alias lft='l -ptr --color=always | grep -v /'
 # list full path filename
 alias lsf='readlink --canonicalize'
-alias rmtorr='rd ~/Downloads/torr/*'
 alias tre="tree -aC -I 'vendor|node_modules|nbproject|coverage|.git|storage|.idea|.DS_Store'"
 alias trel="tre -C | less -R"
 alias tred="tre -d"
@@ -42,7 +41,6 @@ alias crontaball="cat /etc/passwd | sed 's/^\([^:]*\):.*$/sudo crontab -u \1 -l 
 alias nx='PATH=$(npm bin):$PATH'
 alias build='npm run build'
 alias webpack='npx webpack'
-alias asr='sudo service apache2 reload'
 alias o='xdg-open'
 alias brw='byzanz-record-window'
 alias nt='npm run test'
@@ -52,7 +50,6 @@ alias nt='npm run test'
 alias mysqlpager='echo "pager less -SFX -# 10" | cpy'
 
 alias less='less --tabs=4'
-alias myr='mysql -u root -p'
 
 # date time
 alias ct='TZ=America/Chicago date "+%I:%M %p"'

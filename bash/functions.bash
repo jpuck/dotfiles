@@ -49,21 +49,6 @@ printn() {
     echo
 }
 
-cpk() {
-    cp "$1" "$2"
-    k "$2"
-}
-
-mkk() {
-    mk "$1"
-    k "$1"
-}
-
-mkxk() {
-    mkx "$1"
-    k "$1"
-}
-
 function mkdir_for_files(){
     for fullfile in `run-parts --list --regex . "$1"`; do
         directory=$(dirname "$fullfile")
