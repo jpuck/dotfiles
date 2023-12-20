@@ -66,6 +66,16 @@ alias rd='rm -rf'
 # rename all files to lowercase
 alias tolower="rename -f 'y/A-Z/a-z/' *"
 
+orgf() {
+    for folder in *; do
+        if [ -d "$folder" ]; then
+            for file in "$folder"*; do
+                [ "$file" != "$folder" ] && mv "$file" "$folder"
+            done
+        fi
+    done
+}
+
 # delete trailing spaces from a file
 # http://stackoverflow.com/a/20521936/4233593
 alias deltrailspaces="sed -i 's/\s*$//'"
