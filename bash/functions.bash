@@ -35,6 +35,11 @@ genpasswdc() {
     genpasswd -n "$1" | xclip -selection clipboard
 }
 
+randocpy() {
+  chars=${1:-32}
+  tr -dc [:alpha:][:digit:] < /dev/urandom | head -c $chars | cpy
+}
+
 # NOTE: does not count newlines
 strlen() {
 	echo -n "$1" | wc -m
