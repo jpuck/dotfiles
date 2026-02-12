@@ -115,3 +115,8 @@ alias upg='sudo apt auto-remove -y && sudo apt upgrade -y'
 
 alias pscollapse='PS1_BACKUP="$PS1" PS1="\[\033[01;32m\]\! \[\033[0m\]"'
 alias psrestore='PS1="$PS1_BACKUP"'
+
+##
+# me only, this will probably break you
+##
+alias kat='ssh jeff@kat.puck.work'
