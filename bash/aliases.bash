@@ -86,6 +86,9 @@ alias cds='alias cdb="cd "$(pwd)""'
 # copy print working directory
 alias cpwd='echo -n "$PWD" | cpy'
 
+# custom navigation
+alias sc='cd ~/scratch'
+
 # copy-paste x-clip
 # apt-get install xclip
 # http://stackoverflow.com/a/27456981/4233593
