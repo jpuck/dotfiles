@@ -1,4 +1,4 @@
-export TZ=UTC
+export TZ=America/New_York
 export HISTTIMEFORMAT="%FT%T "
 
 # move to working directory
@@ -33,7 +33,7 @@ if $(command -v git >/dev/null 2>&1); then
             USERNAME_COLOR=$lime
         fi
 
-	export PS1="$darkgraylight\D{%H:%M:%S} $(if [[ $EUID -eq 0 ]]; then echo $red; else echo $USERNAME_COLOR; fi)\u$darkgraylight@$HOSTNAME_COLOR\h $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
+	export PS1="$darkgraylight\D{%H:%M:%S} $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
 
 fi
 
@@ -55,8 +55,3 @@ fi
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# DO THIS LAST to keep clean console on launch
-# get timestamp at command execute
-# http://unix.stackexchange.com/a/304270/148062
-trap 'echo -e "\033[38;5;239m$(date +%H:%M:%S)\033[0m"' DEBUG
