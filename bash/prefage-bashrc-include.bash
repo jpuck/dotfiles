@@ -12,6 +12,7 @@ alias pref="cd $prefage_directory"
 . $prefage_directory/php/composer.php.ini.bash
 
 export PATH="$prefage_directory/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
 
 if $(command -v git >/dev/null 2>&1); then
 	. $prefage_directory/git/completion.bash
