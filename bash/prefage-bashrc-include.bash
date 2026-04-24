@@ -34,7 +34,7 @@ if $(command -v git >/dev/null 2>&1); then
             USERNAME_COLOR=$lime
         fi
 
-	export PS1="$darkgraylight\D{%H:%M:%S} $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
+	export PS1="$HOSTNAME_COLOR\h $darkgraylight\D{%H:%M:%S} $bluebright$(if [[ $EUID -eq 0 ]]; then echo \\w; else echo \\W; fi)$green\$(__git_ps1) $lime\! $reset"
 
 fi
 
