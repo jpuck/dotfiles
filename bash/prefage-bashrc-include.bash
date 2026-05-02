@@ -5,6 +5,10 @@ export HISTTIMEFORMAT="%FT%T "
 export prefage_directory=$( cd $( dirname "${BASH_SOURCE[0]}" ) && cd .. && pwd)
 alias pref="cd $prefage_directory"
 
+if [ -f $prefage_directory/COLOR_CONFIG.sh ]; then
+    . $prefage_directory/COLOR_CONFIG.sh
+fi
+
 . $prefage_directory/bash/ubuntu14.04-bashrc.bash
 . $prefage_directory/bash/aliases.bash
 . $prefage_directory/bash/colors.bash
