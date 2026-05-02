@@ -29,12 +29,6 @@ but you need to manually install the plugins
 
 > Press `prefix` + `I` (capital i, as in Install) to fetch the plugin
 
-customize the [status bar background color][tmux-bg-color] in `~/.aliases.bash`
-
-```
-export TMUX_STATUS_BG=colour240
-```
-
 ## Kate Snippets
 
 create symlinks to xml files in your system snippets directory.

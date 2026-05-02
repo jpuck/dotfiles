@@ -143,6 +143,7 @@ main() {
                 local script_dir
                 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
                 printf 'HOSTNAME_COLOR="\\[\\033[0;38;5;%sm\\]"\n' "$selected" > "${script_dir}/COLOR_CONFIG.sh"
+                printf 'export TMUX_STATUS_BG=colour%s\n' "$selected" >> "${script_dir}/COLOR_CONFIG.sh"
                 echo ""
                 printf '%s' "${ESC}[38;5;${selected}m"
                 echo " Wrote HOSTNAME_COLOR ${selected} to ${script_dir}/COLOR_CONFIG.sh"
