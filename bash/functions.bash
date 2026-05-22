@@ -75,3 +75,16 @@ function stop()
 {
     docker-compose stop $1 && docker-compose rm -f $1
 }
+
+tls() {
+  openssl s_client \
+    -connect "$1":443 \
+    -servername "$1" \
+    < /dev/null |
+  openssl x509 \
+    -noout \
+    -subject \
+    -issuer \
+    -dates \
+    -ext subjectAltName
+}
