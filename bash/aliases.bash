@@ -109,6 +109,7 @@ alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Por
 alias dcompose='docker-compose'
 alias up='dcompose up -d'
 alias dn='dcompose down'
+alias srv='python3 -m http.server'
 
 alias upd='pref && pl && cd - && sudo apt update && apt list --upgradable'
 alias upg='sudo apt auto-remove -y && sudo apt upgrade -y'
